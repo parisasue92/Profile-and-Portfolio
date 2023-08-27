@@ -1,0 +1,106 @@
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 15;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    color: rgb(179, 179, 179);
+}
+.site-header {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.site-identity h1 {
+    font-size: 1.5em;
+    margin: 0.6em 0;
+    display: inline-block;
+}
+.site-navigation ul,
+.site-navigation li {
+    margin: 0;
+    padding: 0;
+}
+.site-navigation li {
+    display: inline-block;
+    margin: 1.4em 1em 1em 1em;
+}
+
+
+.horizontal-card,
+.horizontal-card * {
+  box-sizing: border-box;
+}
+.horizontal-card {
+  width: 1282px;
+  height: 452px;
+  position: static;
+}
+.content-container {
+  background: #f7f197;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 1282px;
+  height: 452px;
+  position: absolute;
+  left: -14279px;
+  top: -2036px;
+  overflow: hidden;
+}
+.media-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 493px;
+  height: 452px;
+  position: relative;
+}
+.media {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+.parisa-mardanlou-1 {
+  border-radius: 25px;
+  position: absolute;
+  right: 108px;
+  left: 107px;
+  bottom: 36px;
+  top: 37px;
+}
+.text-content {
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  width: 789px;
+  height: 452px;
+  position: absolute;
+  left: -13786px;
+  top: -2036px;
+}
+.supporting-text {
+  color: var(--m-3-sys-light-on-surface-variant, #49454f);
+  text-align: right;
+  font: 700 32px/150% "Merriweather", sans-serif;
+  position: relative;
+  width: 523px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
