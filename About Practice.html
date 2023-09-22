@@ -1,0 +1,2643 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="stylesheet.css" rel="stylesheet" />
+    <title>"Header with logo"
+    </title>
+    <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.phpformbuilder.pro/templates/bootstrap-5-forms/contact-form-2.php" />
+
+    <!-- Bootstrap 5 CSS -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Bootstrap icons -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js" rel=""stylesheet">
+    <script src="js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+    <script>
+    const flipCardWrapAll = document.querySelector("#flip-card-wrap-all")
+    const cardsWrapper = document.querySelectorAll(".flip-card-3D-wrapper")
+    const cards = document.querySelectorAll(".flip-card")
+    let frontButtons = ""
+    let backButtons = ""
+    
+    for (let i = 0; i < cardsWrapper.length; i++) {
+    frontButtons = cardsWrapper[i].querySelector(".flip-card-btn-turn-to-back")
+    frontButtons.style.visibility = "visible"
+    frontButtons.onclick = function() {
+    cards[i].classList.toggle('do-flip')
+    }
+      
+    backButtons = cardsWrapper[i].querySelector(".flip-card-btn-turn-to-front")
+    backButtons.style.visibility = "visible"
+    backButtons.onclick = function() {
+    cards[i].classList.toggle('do-flip')
+     }  
+    } 
+    
+    let cardTransitionTime = 500;
+    
+    let $card = $('.js-card')
+    let switching = false
+    
+    $('#btn').click(flipCard)
+    
+    function flipCard () {
+       if (switching) {
+          return false
+       }
+       switching = true
+       
+       $card.toggleClass('is-switched')
+       window.setTimeout(function () {
+          $card.children().children().toggleClass('is-active')
+          switching = false
+       }, cardTransitionTime / 2)
+    }
+    
+    var card = document.querySelector(".card");
+    var playing = false;
+    
+    card.addEventListener('click',function() {
+      if(playing)
+        return;
+      
+      playing = true;
+      anime({
+        targets: card,
+        scale: [{value: 1}, {value: 1.4}, {value: 1, delay: 250}],
+        rotateY: {value: '+=180', delay: 200},
+        easing: 'easeInOutSine',
+        duration: 400,
+        complete: function(anim){
+           playing = false;
+        }
+      });
+    })
+  </script>
+  
+  </head>
+
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	
+    
+    
+    <nav class="navbar navbar-expand-sm navbar dark" id="neubar">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="img/Logo.png" height="60" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item" style="font: white;">
+                <a class="nav-link mx-2 active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="#">Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="#">Case Studies</a>
+              </li>              <li class="nav-item">
+                <a class="nav-link mx-2" href="#">Contact</a>
+              </li>
+
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Home</a></li>
+                  <li><a class="dropdown-item" href="#">About Us</a></li>
+                  <li><a class="dropdown-item" href="#">Work</a></li>
+                  <li><a class="dropdown-item" href="#">Case Studies</a></li>
+                  <li><a class="dropdown-item" href="#">Contact</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<br>
+
+
+    <div class='container'>
+        <div class='row'>  
+        <div class="flip-card-3D-wrapper col-md-4">
+        <div class="flip-card">
+        <div class="flip-card-front">
+        <div class='card-img'><img src="img/Pic of Parisa 2.jpg"></div>  
+           <div class='card-body'> 
+            <h4 class="text-center">Card title</h4>
+            <p>A quick description of the front item</p> 
+            <button class="flip-card-btn-turn-to-back">More info</button>
+           </div>  
+        </div>
+        <div class="flip-card-back">
+           <div class='card-body'> 
+           <h4 class="text-center">See More</h4>
+           <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <ul> 
+            <li> Item 01 </li>
+            <li> Item 02 </li>
+            <li> Item 03 </li>
+             </ul>       
+           <button class="flip-card-btn-turn-to-front">flip</button>
+           </div>   
+        </div>
+        </div>
+        </div>  
+        <div class="flip-card-3D-wrapper col-md-4">
+        <div class="flip-card">
+        <div class="flip-card-front">
+        <img src="img/Pic of Parisa 2.jpg">
+           <div class='card-body'> 
+            <h4 class="text-center">Card title</h4>
+            <p>A quick description of the front item</p> 
+            <button class="button">See More</button>
+           </div>  
+        </div>
+        <div class="flip-card-back">
+           <div class='card-body'> 
+           <h4 class="text-center">See More</h4>
+           <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <ul> 
+            <li> Item 01 </li>
+            <li> Item 02 </li>
+            <li> Item 03 </li>
+             </ul>       
+           <button class="button">See More</button>
+           </div>   
+        </div>
+        </div>
+        </div> 
+
+
+        <div class="flip-card-3D-wrapper col-md-4">
+        <div class="flip-card">
+        <div class="flip-card-front">
+        <img src="img/Pic of Parisa 2.jpg" >
+           <div class='card-body'> 
+            <h4 class="text-center">Card title</h4>
+            <p>A quick description of the front item</p> 
+            <button class="flip-card-btn-turn-to-back">More info</button>
+           </div>  
+        </div>
+        <div class="flip-card-back">
+           <div class='card-body'> 
+           <h4 class="text-center">More info</h4>
+           <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <ul> 
+            <li> Item 01 </li>
+            <li> Item 02 </li>
+            <li> Item 03 </li>
+             </ul>       
+           <button class="flip-card-btn-turn-to-front">flip</button>
+           </div>   
+        </div>
+        </div>
+        </div>   
+        </div>
+        </div>  
+
+
+
+        <ul class="cards">
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--fence"></div>
+              <div class="card__content">
+                <div class="card__title">Flex</div>
+                <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+                <button class="btn btn--block card__btn">Button</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--river"></div>
+              <div class="card__content">
+                <div class="card__title">Flex Grow</div>
+                <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
+                <button class="btn btn--block card__btn">Button</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--record"></div>
+              <div class="card__content">
+                <div class="card__title">Flex Shrink</div>
+                <p class="card__text">This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid.</p>
+                <button class="btn btn--block card__btn">Button</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--flowers"></div>
+              <div class="card__content">
+                <div class="card__title">Flex Basis</div>
+                <p class="card__text">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property."</p>
+                <button class="btn btn--block card__btn">Button</button>
+              </div>
+            </div>
+          </li>
+        </ul>        
+    
+
+
+        <h1> Third round of BS</h1>
+
+
+
+
+
+        <button id="btn" class="btn btn--blue">Flip card</button>
+
+<div class="card js-card">
+  <div class="card__wrapper">
+    <div class="card__side is-active">
+      <img src="img/User Centric Designs.png">
+      <h1>FRONT</h1>
+      <h1>FRONT</h1>
+    </div>
+    <div class="card__side card__side--back">
+      <img src="img/Pic of Parisa.jpg">
+      <h2>BACK</h2>
+      <h2>BACK</h2>
+      <h2>BACK</h2>
+      <h2>BACK</h2>
+      <h2>BACK</h2>
+    </div>
+  </div>
+</div>
+
+<h1 class="title">WHAT THE HEIGHT!</h1>
+
+<div class="card-container">
+  <div class="card">
+    <div class="front">
+      <img src="img/High attention to detail.png">
+    </div>
+    <div class="back">
+      <img src="img/User focus img.png"
+    </div>
+  </div>
+</div>
+</body>
+
+
+
+
+.desktop-1,
+.desktop-1 * {
+  box-sizing: border-box;
+}
+.desktop-1 {
+  background: #021e47;
+  width: 1440px;
+  height: 29295px;
+  position: relative;
+  overflow: hidden;
+}
+.inclusion-center-for-community-and-justice {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-15 {
+  background: #112e51;
+  border-style: solid;
+  border-color: #fff8f1;
+  border-width: 3px;
+  width: 1440px;
+  height: 255px;
+  position: absolute;
+  left: 0px;
+  top: 179px;
+}
+.logo-w-name {
+  width: 444px;
+  height: 322px;
+  position: static;
+}
+.rectangle-13 {
+  background: #112e51;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #fff8f1;
+  border-width: 8px;
+  width: 444px;
+  height: 322px;
+  position: absolute;
+  left: 105px;
+  top: 151px;
+  box-shadow: 6px 6px 4px 0px rgba(17, 46, 81, 0.4);
+}
+.inclusion-center-for-community-and-justice2 {
+  color: #fff8f1;
+  text-align: center;
+  position: absolute;
+  left: 145px;
+  top: 349px;
+  width: 362px;
+  height: 96px;
+}
+.inclusion-center-for-community-and-justice-2-span {
+  color: #fff8f1;
+  font: 500 48px "Roboto", sans-serif;
+}
+.inclusion-center-for-community-and-justice-2-span2 {
+  color: #fff8f1;
+  font: 500 56px "Roboto", sans-serif;
+}
+.inclusion-center-for-community-and-justice-2-span3 {
+  color: #fff8f1;
+  font: 500 48px "Roboto", sans-serif;
+}
+.inclusion-center-for-community-and-justice-2-span4 {
+  color: #fff8f1;
+  font: 500 28px "Roboto", sans-serif;
+  text-transform: lowercase;
+}
+._7018029-logo-2 {
+  border-radius: 15px;
+  width: 340px;
+  height: 176px;
+  position: absolute;
+  left: 151px;
+  top: 177px;
+}
+.rectangle-14 {
+  background: #fff8f1;
+  border-radius: 15px;
+  width: 770px;
+  height: 159px;
+  position: absolute;
+  left: 623px;
+  top: 227px;
+}
+.responsive-website-for-nonprofit-organization-that-focuses-on-community-building-and-creating-an-inclusive-environment {
+  color: #000000;
+  text-align: left;
+  font: 500 24px "Roboto", sans-serif;
+  position: absolute;
+  left: 712px;
+  top: 278px;
+  width: 621px;
+  height: 86px;
+}
+.project-overview {
+  background: #fff8f1;
+  border-radius: 20px;
+  padding: 0px 48px 0px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 886px;
+  position: absolute;
+  left: 113px;
+  top: 549px;
+}
+.project-overview2 {
+  color: #000000;
+  text-align: center;
+  font: 700 36px/40px "Roboto", sans-serif;
+  text-decoration: underline;
+  position: relative;
+  width: 1121px;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.background-and-motivation {
+  color: #000000;
+  text-align: left;
+  font: 600 28px "Roboto", sans-serif;
+  position: relative;
+  width: 352px;
+  height: 30.37px;
+}
+.duration {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-31 {
+  background: #021e47;
+  border-radius: 15px;
+  width: 209.77px;
+  height: 154.88px;
+  position: absolute;
+  left: 1060.07px;
+  top: 1247px;
+}
+._2-weeks {
+  color: #ffffff;
+  text-align: center;
+  font: 600 22px "Inter", sans-serif;
+  position: absolute;
+  left: 1060.07px;
+  top: 1247px;
+  width: 209.77px;
+  height: 154.88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scope {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-30 {
+  background: #021e47;
+  border-radius: 15px;
+  width: 209.77px;
+  height: 154.88px;
+  position: absolute;
+  left: 161px;
+  top: 1247px;
+}
+.website-redesign {
+  color: #ffffff;
+  text-align: center;
+  font: 600 22px "Inter", sans-serif;
+  position: absolute;
+  left: 161px;
+  top: 1247px;
+  width: 209.77px;
+  height: 154.88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.role {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-34 {
+  background: #021e47;
+  border-radius: 15px;
+  width: 209.77px;
+  height: 154.88px;
+  position: absolute;
+  left: 385.77px;
+  top: 1247px;
+}
+.ux-designer-user-research {
+  color: #ffffff;
+  text-align: center;
+  font: 600 22px "Inter", sans-serif;
+  position: absolute;
+  left: 385.77px;
+  top: 1247px;
+  width: 209.77px;
+  height: 154.88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-members {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-33 {
+  background: #021e47;
+  border-radius: 15px;
+  width: 209.77px;
+  height: 154.88px;
+  position: absolute;
+  left: 610.54px;
+  top: 1247px;
+}
+.edwin-bay-chandler-north-and-parisa-mardanlou {
+  color: #ffffff;
+  text-align: center;
+  font: 600 22px "Inter", sans-serif;
+  position: absolute;
+  left: 610.54px;
+  top: 1247px;
+  width: 209.77px;
+  height: 154.88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tools {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-32 {
+  background: #021e47;
+  border-radius: 15px;
+  width: 209.77px;
+  height: 154.88px;
+  position: absolute;
+  left: 835.3px;
+  top: 1247px;
+}
+.figma-canva-google-docs {
+  color: #ffffff;
+  text-align: center;
+  font: 600 22px "Inter", sans-serif;
+  position: absolute;
+  left: 835.3px;
+  top: 1247px;
+  width: 209.77px;
+  height: 154.88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.design-table-of-content {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-36 {
+  background: #ffffff;
+  width: 1395px;
+  height: 682px;
+  position: absolute;
+  left: 22px;
+  top: 1616px;
+}
+.research-card {
+  width: 265px;
+  height: 484px;
+  position: static;
+}
+.rectangle-21 {
+  background: #88d9ff;
+  border-radius: 15px;
+  width: 265px;
+  height: 484px;
+  position: absolute;
+  left: 90px;
+  top: 1758px;
+}
+.ideation-card {
+  width: 265px;
+  height: 484px;
+  position: static;
+}
+.rectangle-24 {
+  background: #00ff87;
+  border-radius: 15px;
+  width: 265px;
+  height: 484px;
+  position: absolute;
+  left: 421px;
+  top: 1758px;
+}
+.design-card {
+  width: 266px;
+  height: 484px;
+  position: static;
+}
+.rectangle-23 {
+  background: #fff500;
+  border-radius: 15px;
+  width: 265px;
+  height: 484px;
+  position: absolute;
+  left: 753px;
+  top: 1758px;
+}
+.prototype-and-testing-card {
+  width: 266px;
+  height: 485px;
+  position: static;
+}
+.rectangle-22 {
+  background: #fff8f1;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #c9a16b;
+  border-width: 1px;
+  width: 265px;
+  height: 484px;
+  position: absolute;
+  left: 1084px;
+  top: 1758px;
+}
+.design-table-of-content2 {
+  color: #000000;
+  text-align: center;
+  font: 700 60px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - 408px);
+  top: 1642px;
+  width: 839px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preview-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 34px;
+  top: 2570px;
+}
+.preview-background {
+  background: #fff8f1;
+  border-radius: 10px;
+  flex-shrink: 0;
+  width: 1357px;
+  height: 525px;
+  position: relative;
+}
+.desktop-preview {
+  flex-shrink: 0;
+  width: 800px;
+  height: 426.52px;
+  position: static;
+}
+.desktop-preview2 {
+  color: #000000;
+  text-align: center;
+  font: 700 24px "Merriweather", sans-serif;
+  position: absolute;
+  left: 353px;
+  top: 445.52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-7 {
+  width: 800px;
+  height: 376.52px;
+  position: absolute;
+  left: 54px;
+  top: calc(50% - 213.5px);
+}
+.mobile-preview {
+  flex-shrink: 0;
+  width: 219px;
+  height: 430px;
+  position: static;
+}
+.mobile-preview2 {
+  color: #000000;
+  text-align: center;
+  font: 700 24px "Merriweather", sans-serif;
+  position: absolute;
+  left: 1005px;
+  top: 440px;
+  width: 219px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.screenshot-20230523-191003-chrome-1 {
+  width: 219px;
+  height: 377px;
+  position: absolute;
+  left: 1005px;
+  top: calc(50% - 222.5px);
+}
+.protopersona {
+  position: absolute;
+  inset: 0;
+}
+.inclusion-user-journey-1 {
+  width: 1000px;
+  height: 847.66px;
+  position: absolute;
+  left: 393px;
+  top: 3188px;
+}
+.developing-our-protopersona-maya-thompson-we-decided-to-take-the-persona-angle-of-the-donator-for-our-project-due-to-time-constraints-other-personas-we-would-have-also-taken-would-have-been-those-of-the-services-seeking-persona {
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  left: 47px;
+  top: 3188px;
+  width: 324px;
+  height: 848px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.developing-our-protopersona-maya-thompson-we-decided-to-take-the-persona-angle-of-the-donator-for-our-project-due-to-time-constraints-other-personas-we-would-have-also-taken-would-have-been-those-of-the-services-seeking-persona-span {
+  color: #ffffff;
+  font: 700 40px "Merriweather", sans-serif;
+}
+.developing-our-protopersona-maya-thompson-we-decided-to-take-the-persona-angle-of-the-donator-for-our-project-due-to-time-constraints-other-personas-we-would-have-also-taken-would-have-been-those-of-the-services-seeking-persona-span2 {
+  color: #ffffff;
+  font: 700 24px "Merriweather", sans-serif;
+}
+.group-22 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-342 {
+  background: #88d9ff;
+  width: 1372px;
+  height: 86px;
+  position: absolute;
+  left: 33px;
+  top: 2460px;
+}
+.research {
+  color: #000000;
+  text-align: center;
+  font: 700 50px "Merriweather", sans-serif;
+  position: absolute;
+  left: 34px;
+  top: 2460px;
+  width: 266px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-research-primary {
+  position: absolute;
+  inset: 0;
+}
+.user-survey-and-interviews {
+  color: #ffffff;
+  text-align: center;
+  font: 700 40px "Merriweather", sans-serif;
+  position: absolute;
+  left: 38px;
+  top: 4170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.developed-implemented-created-a-8-questionnaire-survey-5-multiple-choice-and-3-open-ended-questions-12-user-participants-created-an-interview-plan-with-8-question-semi-structured-involving-before-and-after-visiting-the-organizations-page {
+  color: #fff8f1;
+  text-align: center;
+  font: 700 32px "Merriweather", sans-serif;
+  position: absolute;
+  left: 83px;
+  top: 4288px;
+  width: 572px;
+  height: 636px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.developed-implemented-created-a-8-questionnaire-survey-5-multiple-choice-and-3-open-ended-questions-12-user-participants-created-an-interview-plan-with-8-question-semi-structured-involving-before-and-after-visiting-the-organizations-page-span {
+  color: #fff8f1;
+  font: 700 32px "Merriweather", sans-serif;
+}
+.developed-implemented-created-a-8-questionnaire-survey-5-multiple-choice-and-3-open-ended-questions-12-user-participants-created-an-interview-plan-with-8-question-semi-structured-involving-before-and-after-visiting-the-organizations-page-span2 {
+  color: #fff8f1;
+  font: 700 32px "Merriweather", sans-serif;
+}
+.developed-implemented-created-a-8-questionnaire-survey-5-multiple-choice-and-3-open-ended-questions-12-user-participants-created-an-interview-plan-with-8-question-semi-structured-involving-before-and-after-visiting-the-organizations-page-span3 {
+  color: #fff8f1;
+  font: 700 32px "Merriweather", sans-serif;
+}
+.developed-implemented-created-a-8-questionnaire-survey-5-multiple-choice-and-3-open-ended-questions-12-user-participants-created-an-interview-plan-with-8-question-semi-structured-involving-before-and-after-visiting-the-organizations-page-span4 {
+  color: #fff8f1;
+  font: 700 32px "Merriweather", sans-serif;
+}
+.image-8 {
+  width: 639px;
+  height: 168px;
+  position: absolute;
+  left: 754px;
+  top: 4431px;
+}
+.image-9 {
+  width: 443px;
+  height: 349px;
+  position: absolute;
+  left: 852px;
+  top: 4632px;
+}
+.samples-of-questionaire-and-interview-questions {
+  color: #ffffff;
+  text-align: center;
+  font: 700 36px "Merriweather", sans-serif;
+  position: absolute;
+  left: 852px;
+  top: 4297px;
+  width: 483px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-insight {
+  color: #ffffff;
+  text-align: center;
+  font: 700 40px "Merriweather", sans-serif;
+  position: absolute;
+  left: calc(50% - 124px);
+  top: 5089px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.affinity-diagram-empathy-map-1 {
+  width: 1378px;
+  height: 917px;
+  position: absolute;
+  left: 32px;
+  top: 6853px;
+}
+.affinity-diagram-empathy-map-1-1 {
+  width: 1381px;
+  height: 485px;
+  position: absolute;
+  left: 32px;
+  top: 7838px;
+}
+.user-empathy {
+  color: #ffffff;
+  text-align: center;
+  font: 700 40px "Merriweather", sans-serif;
+  position: absolute;
+  left: 581px;
+  top: 6735px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.now-that-we-have-seen-what-the-users-have-seen-and-explained-from-their-experience-from-the-inclusion-center-s-site-we-can-now-refine-and-properly-define-our-user-persona-from-there-we-can-use-maya-thompson-as-our-guide-to-indentifying-the-root-problems-and-designing-solutions-to-meet-our-users-needs {
+  color: #fff500;
+  text-align: right;
+  font: 700 38px "Merriweather", sans-serif;
+  position: absolute;
+  left: 37px;
+  top: 8391px;
+  width: 1364px;
+  height: 449px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.inclusion-user-journey-5-1 {
+  width: 1225px;
+  height: 682px;
+  position: absolute;
+  left: calc(50% - 613px);
+  top: 8800px;
+}
+.inclusion-user-journey-6-1 {
+  width: 1278px;
+  height: 762px;
+  position: absolute;
+  left: 81px;
+  top: 10010px;
+}
+.user-flow-card {
+  position: absolute;
+  inset: 0;
+}
+.card-sorting-site-map-user-flow-2-1 {
+  width: 1079.25px;
+  height: 285.75px;
+  position: absolute;
+  left: 44px;
+  top: 13013px;
+}
+.here-is-the-user-path-maya-thompson-will-go-through-when-scrolling-to-the-site {
+  color: #fff500;
+  text-align: center;
+  font: 400 30px "Merriweather", sans-serif;
+  position: absolute;
+  left: 1124px;
+  top: 13013px;
+  width: 273px;
+  height: 286px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-11 {
+  width: 153px;
+  height: 308px;
+  position: absolute;
+  left: 1056px;
+  top: 10895px;
+}
+.image-12 {
+  width: 1121px;
+  height: 510px;
+  position: absolute;
+  left: 90px;
+  top: 11237px;
+}
+.card-sorting-site-map-user-flow-2 {
+  width: 1211.25px;
+  height: 1122.5px;
+  position: absolute;
+  left: calc(50% - 606px);
+  top: 13428.75px;
+}
+._9-1 {
+  width: 1250.6px;
+  height: 895.05px;
+  position: absolute;
+  left: calc(50% - 606px);
+  top: 14665px;
+}
+.image-2 {
+  width: 560px;
+  height: 628px;
+  position: absolute;
+  left: 114px;
+  top: 16354px;
+  transform-origin: 0 0;
+  transform: rotate(-90deg) scale(1, 1);
+}
+.home-page-mockup {
+  background: #ffffff;
+  width: 1134px;
+  height: 736.5px;
+  position: absolute;
+  left: calc(50% - 567px);
+  top: 16415px;
+  overflow: hidden;
+}
+.rectangle-1 {
+  background: #d9d9d9;
+  width: 1134px;
+  height: 99.75px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.group-2 {
+  position: absolute;
+  left: 67.5px;
+  top: 16.5px;
+  overflow: visible;
+}
+.rectangle-3 {
+  background: #d9d9d9;
+  width: 892.5px;
+  height: 291px;
+  position: absolute;
+  left: 120.75px;
+  top: 229.5px;
+}
+.rectangle-4 {
+  background: #d9d9d9;
+  width: 1134px;
+  height: 144px;
+  position: absolute;
+  left: 0px;
+  top: 592.5px;
+}
+.about {
+  color: #000000;
+  text-align: center;
+  font: 400 12px "Inter", sans-serif;
+  position: absolute;
+  left: 387.75px;
+  top: 664.5px;
+  width: 45px;
+}
+.contact {
+  color: #000000;
+  text-align: center;
+  font: 400 12px "Inter", sans-serif;
+  position: absolute;
+  left: 691.5px;
+  top: 664.5px;
+  width: 57.75px;
+}
+.events {
+  color: #000000;
+  text-align: center;
+  font: 400 12px "Inter", sans-serif;
+  position: absolute;
+  left: 620.25px;
+  top: 664.5px;
+  width: 48px;
+}
+.news {
+  color: #000000;
+  text-align: center;
+  font: 400 12px "Inter", sans-serif;
+  position: absolute;
+  left: 557.25px;
+  top: 663.75px;
+  width: 41.25px;
+}
+.support-us {
+  color: #000000;
+  text-align: center;
+  font: 400 12px "Inter", sans-serif;
+  position: absolute;
+  left: 453.75px;
+  top: 664.5px;
+  width: 81.75px;
+}
+.group-23 {
+  position: absolute;
+  left: 67.5px;
+  top: 627px;
+  overflow: visible;
+}
+.group-24 {
+  position: absolute;
+  left: 501.75px;
+  top: 124.5px;
+  overflow: visible;
+}
+.contact2 {
+  color: #000000;
+  text-align: left;
+  font: 400 18px "Inter", sans-serif;
+  position: absolute;
+  left: 1032px;
+  top: 51.75px;
+  width: 72px;
+}
+.support-us2 {
+  color: #000000;
+  text-align: left;
+  font: 400 18px "Inter", sans-serif;
+  position: absolute;
+  left: 914.25px;
+  top: 51.75px;
+  width: 102px;
+}
+.staff-and-board {
+  color: #000000;
+  text-align: left;
+  font: 400 18px "Inter", sans-serif;
+  position: absolute;
+  left: 758.25px;
+  top: 51.75px;
+  width: 140.25px;
+}
+.history {
+  color: #000000;
+  text-align: left;
+  font: 400 18px "Inter", sans-serif;
+  position: absolute;
+  left: 576px;
+  top: 51.75px;
+  width: 64.5px;
+}
+.mission-statement {
+  color: #000000;
+  text-align: center;
+  font: 400 18px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - 78.75px);
+  top: 240px;
+}
+.rectangle-5 {
+  background: #ffffff;
+  width: 141.75px;
+  height: 31.5px;
+  position: absolute;
+  left: 825px;
+  top: 677.25px;
+}
+.email-sign-up {
+  color: #000000;
+  text-align: center;
+  font: 400 18px "Inter", sans-serif;
+  position: absolute;
+  left: 836.25px;
+  top: 682.5px;
+  width: 124.5px;
+  height: 24px;
+}
+.quick-links {
+  color: #000000;
+  text-align: center;
+  font: 400 18px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - 48.75px);
+  top: 610.5px;
+}
+.rectangle-6 {
+  background: #ffffff;
+  width: 141.75px;
+  height: 31.5px;
+  position: absolute;
+  left: 825px;
+  top: 619.5px;
+}
+.donate {
+  color: #000000;
+  text-align: center;
+  font: 400 18px "Inter", sans-serif;
+  position: absolute;
+  left: 864.75px;
+  top: 624.75px;
+}
+.rectangle-7 {
+  background: #ffffff;
+  width: 50.25px;
+  height: 38.25px;
+  position: absolute;
+  left: 1028.25px;
+  top: 615.75px;
+}
+.rectangle-8 {
+  background: #ffffff;
+  width: 50.25px;
+  height: 38.25px;
+  position: absolute;
+  left: 1028.25px;
+  top: 673.5px;
+}
+.social-media-logo {
+  color: #000000;
+  text-align: center;
+  font: 400 7.5px "Inter", sans-serif;
+  position: absolute;
+  left: 1029.75px;
+  top: 684px;
+}
+.social-media-logo2 {
+  color: #000000;
+  text-align: center;
+  font: 400 7.5px "Inter", sans-serif;
+  position: absolute;
+  left: 1031.25px;
+  top: 624.75px;
+}
+.programs {
+  width: 86.25px;
+  height: 21.75px;
+  position: absolute;
+  left: 661.5px;
+  top: 51.75px;
+}
+.programs2 {
+  color: #000000;
+  text-align: left;
+  font: 400 18px "Inter", sans-serif;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 86.25px;
+}
+.we-decided-as-a-team-to-come-up-with-a-few-layouts-that-would-focus-on-the-inclusion-center-s-main-content-that-was-easier-for-users-to-navigate-and-not-be-overwhelmed-in-the-process {
+  color: #ffffff;
+  text-align: center;
+  font: 400 30px "Merriweather", sans-serif;
+  position: absolute;
+  left: 826px;
+  top: 15903px;
+  width: 483px;
+  height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wireframe-a {
+  color: #ffffff;
+  text-align: center;
+  font: 700 32px "Merriweather", sans-serif;
+  position: absolute;
+  left: 114px;
+  top: 15758px;
+  width: 628px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wireframe-b {
+  color: #ffffff;
+  text-align: center;
+  font: 700 32px "Merriweather", sans-serif;
+  position: absolute;
+  left: 574px;
+  top: 17371px;
+  width: 814px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wireframe-b2 {
+  position: absolute;
+  left: 574px;
+  top: 17407px;
+  overflow: visible;
+}
+.home {
+  background: #ffffff;
+  width: 1134px;
+  height: 736.5px;
+  position: absolute;
+  left: calc(50% - 567px);
+  top: 18215px;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.rectangle-35 {
+  background: #d9d9d9;
+  width: 1134px;
+  height: 85.5px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.group-3 {
+  position: absolute;
+  left: 0px;
+  top: 85.5px;
+  overflow: visible;
+}
+.frame-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 33.75px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 731.25px;
+  position: absolute;
+  left: 387.75px;
+  top: 48.75px;
+}
+.staff-and-board2 {
+  background: #a8a8a8;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.staff-board {
+  color: #000000;
+  text-align: center;
+  font: 400 18px "Inter", sans-serif;
+  position: relative;
+}
+.staff-and-board3 {
+  background: #a8a8a8;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 960px;
+  top: 6px;
+}
+.staff-board2 {
+  color: #000000;
+  text-align: center;
+  font: 400 12px "Inter", sans-serif;
+  position: relative;
+}
+.staff-and-board4 {
+  background: #a8a8a8;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 1044.75px;
+  top: 6px;
+}
+.group-25 {
+  position: absolute;
+  left: 15px;
+  top: 14.25px;
+  overflow: visible;
+}
+.rectangle-42 {
+  background: #d9d9d9;
+  width: 1134px;
+  height: 120px;
+  position: absolute;
+  left: 0px;
+  top: 616.5px;
+}
+.lorem-ipsum-dolor {
+  color: #000000;
+  text-align: center;
+  font: 400 27px "Inter", sans-serif;
+  position: absolute;
+  left: 15px;
+  top: 150.75px;
+  width: 268.5px;
+  height: 36.75px;
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-faucibus-sed-pellentesque-nisl-posuere-ligula-sem-sagittis-tincidunt-tincidunt-pellentesque-blandit-varius-congue-diam-aenean-sit-mauris-amet-dignissim-hac-in-sit-justo-metus-sed-vitae-tristique-eros-mi-molestie-quisque-blandit-consectetur-iaculis-facilisi-id-dis-mi-molestie-eget-suscipit-eget-leo-urna-tortor-at-quis-pretium-non-neque-quis-magna-sed-a-orci-aliquet-arcu-tincidunt-velit-orci {
+  color: #000000;
+  text-align: center;
+  font: 400 15px "Inter", sans-serif;
+  position: absolute;
+  left: 28.5px;
+  top: 195px;
+  width: 241.5px;
+  height: 268.5px;
+}
+.contact-info {
+  background: #9b9b9b;
+  padding: 3.75px 7.5px 3.75px 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 132px;
+  top: 621px;
+}
+.contact-info2 {
+  color: #000000;
+  text-align: center;
+  font: 400 18px "Inter", sans-serif;
+  position: relative;
+}
+.rectangle-52 {
+  background: #a3a3a3;
+  width: 171.75px;
+  height: 84px;
+  position: absolute;
+  left: 108px;
+  top: 652.5px;
+}
+.group-4 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-62 {
+  background: #b7b7b7;
+  width: 171.75px;
+  height: 114px;
+  position: absolute;
+  left: 481.5px;
+  top: 621px;
+}
+.staff-and-board5 {
+  background: #a8a8a8;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 486.75px;
+  top: 624.75px;
+}
+.staff-and-board6 {
+  background: #a8a8a8;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 486.75px;
+  top: 659.25px;
+}
+.staff-and-board7 {
+  background: #ffffff;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 486.75px;
+  top: 694.5px;
+}
+.frame-5 {
+  background: #b3b3b3;
+  padding: 3.75px 7.5px 3.75px 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 885.75px;
+  top: 621px;
+}
+.support-us3 {
+  color: #000000;
+  text-align: center;
+  font: 400 18px "Inter", sans-serif;
+  position: relative;
+}
+.staff-and-board8 {
+  background: #a8a8a8;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 866.25px;
+  top: 666.75px;
+}
+.staff-and-board9 {
+  background: #a8a8a8;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 950.25px;
+  top: 666.75px;
+}
+.after-several-reviews-of-the-wireframes-and-some-refining-using-figma-we-did-a-simple-guerrilla-testing-with-a-few-members-of-our-cohort-to-decide-on-the-best-path-to-take-wireframe-b-was-a-unanimous-winner-of-the-selections {
+  color: #ffffff;
+  text-align: center;
+  font: 400 30px "Merriweather", sans-serif;
+  position: absolute;
+  left: 91px;
+  top: 17486px;
+  width: 378px;
+  height: 465px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.group-242 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-3422 {
+  background: #fff8f1;
+  width: 1372px;
+  height: 86px;
+  position: absolute;
+  left: 0px;
+  top: 19216px;
+}
+.prototyping-and-testing {
+  color: #000000;
+  text-align: center;
+  font: 700 50px "Merriweather", sans-serif;
+  position: absolute;
+  left: 1px;
+  top: 19216px;
+  width: 648px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heuristics-button {
+  border-radius: 50px;
+  border-style: solid;
+  border-color: var(--m-3-ref-primary-primary-99, #fffbfe);
+  border-width: 1px;
+  padding: 12px 20px 12px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 921px;
+  top: 12001px;
+  overflow: hidden;
+}
+.do-something {
+  color: var(--m-3-ref-primary-primary-99, #fffbfe);
+  text-align: left;
+  font: 500 16px/24px "DM Sans", sans-serif;
+  position: relative;
+}
+.home2 {
+  background: #ffffff;
+  width: 756px;
+  height: 491px;
+  position: absolute;
+  left: 340px;
+  top: 19342px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.rectangle-37 {
+  background: #d9d9d9;
+  width: 756px;
+  height: 57px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.group-32 {
+  position: absolute;
+  left: 0px;
+  top: 57px;
+  overflow: visible;
+}
+.frame-22 {
+  display: flex;
+  flex-direction: row;
+  gap: 22.5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 487.5px;
+  position: absolute;
+  left: 258.5px;
+  top: 32.5px;
+}
+.staff-and-board10 {
+  background: #a8a8a8;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.staff-and-board11 {
+  background: #a8a8a8;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 640px;
+  top: 4px;
+}
+.staff-board3 {
+  color: #000000;
+  text-align: center;
+  font: 400 8px "Inter", sans-serif;
+  position: relative;
+}
+.staff-and-board12 {
+  background: #a8a8a8;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 696.5px;
+  top: 4px;
+}
+.group-26 {
+  position: absolute;
+  left: 10px;
+  top: 9.5px;
+  overflow: visible;
+}
+.rectangle-43 {
+  background: #d9d9d9;
+  width: 756px;
+  height: 80px;
+  position: absolute;
+  left: 0px;
+  top: 411px;
+}
+.lorem-ipsum-dolor2 {
+  color: #000000;
+  text-align: center;
+  font: 400 18px "Inter", sans-serif;
+  position: absolute;
+  left: 10px;
+  top: 100.5px;
+  width: 179px;
+  height: 24.5px;
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-faucibus-sed-pellentesque-nisl-posuere-ligula-sem-sagittis-tincidunt-tincidunt-pellentesque-blandit-varius-congue-diam-aenean-sit-mauris-amet-dignissim-hac-in-sit-justo-metus-sed-vitae-tristique-eros-mi-molestie-quisque-blandit-consectetur-iaculis-facilisi-id-dis-mi-molestie-eget-suscipit-eget-leo-urna-tortor-at-quis-pretium-non-neque-quis-magna-sed-a-orci-aliquet-arcu-tincidunt-velit-orci2 {
+  color: #000000;
+  text-align: center;
+  font: 400 10px "Inter", sans-serif;
+  position: absolute;
+  left: 19px;
+  top: 130px;
+  width: 161px;
+  height: 179px;
+}
+.contact-info3 {
+  background: #9b9b9b;
+  padding: 2.5px 5px 2.5px 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 88px;
+  top: 414px;
+}
+.contact-info4 {
+  color: #000000;
+  text-align: center;
+  font: 400 12px "Inter", sans-serif;
+  position: relative;
+}
+.rectangle-53 {
+  background: #a3a3a3;
+  width: 114.5px;
+  height: 56px;
+  position: absolute;
+  left: 72px;
+  top: 435px;
+}
+.rectangle-63 {
+  background: #b7b7b7;
+  width: 114.5px;
+  height: 76px;
+  position: absolute;
+  left: 321px;
+  top: 414px;
+}
+.staff-and-board13 {
+  background: #a8a8a8;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 324.5px;
+  top: 416.5px;
+}
+.staff-and-board14 {
+  background: #a8a8a8;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 324.5px;
+  top: 439.5px;
+}
+.staff-and-board15 {
+  background: #ffffff;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 324.5px;
+  top: 463px;
+}
+.frame-52 {
+  background: #b3b3b3;
+  padding: 2.5px 5px 2.5px 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 590.5px;
+  top: 414px;
+}
+.support-us4 {
+  color: #000000;
+  text-align: center;
+  font: 400 12px "Inter", sans-serif;
+  position: relative;
+}
+.staff-and-board16 {
+  background: #a8a8a8;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 577.5px;
+  top: 444.5px;
+}
+.staff-and-board17 {
+  background: #a8a8a8;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 633.5px;
+  top: 444.5px;
+}
+.donation-summary-page {
+  background: #ffffff;
+  width: 756px;
+  height: 491px;
+  position: absolute;
+  left: 340px;
+  top: 21026px;
+  overflow: hidden;
+}
+.rectangle-40 {
+  background: #d9d9d9;
+  border-radius: 7.5px;
+  width: 707.5px;
+  height: 365.5px;
+  position: absolute;
+  left: 32px;
+  top: 86px;
+}
+.rectangle-51 {
+  background: #ffffff;
+  width: 111px;
+  height: 28px;
+  position: absolute;
+  left: 59.5px;
+  top: 142.5px;
+}
+.rectangle-46 {
+  background: #d9d9d9;
+  width: 32.5px;
+  height: 32.5px;
+  position: absolute;
+  left: 345.5px;
+  top: 297px;
+}
+.yes {
+  color: #000000;
+  text-align: center;
+  font: 600 12px "Inter", sans-serif;
+  position: absolute;
+  left: 344.5px;
+  top: 296.5px;
+  width: 33.5px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rectangle-41 {
+  background: #ffffff;
+  border-radius: 5px;
+  width: 160px;
+  height: 45.5px;
+  position: absolute;
+  left: 398px;
+  top: 97px;
+}
+.tool-bar {
+  position: absolute;
+  inset: 0;
+}
+.top-tool-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 22.5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 487.5px;
+  position: absolute;
+  left: 258.5px;
+  top: 32.5px;
+}
+.group-27 {
+  position: absolute;
+  left: 10px;
+  top: 9.5px;
+  overflow: visible;
+}
+.donation-summary {
+  color: #000000;
+  text-align: center;
+  font: 700 12px "Inter", sans-serif;
+  position: absolute;
+  left: 399px;
+  top: 102.5px;
+  width: 158.5px;
+  height: 34.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rectangle-422 {
+  background: #ffffff;
+  border-radius: 7.5px;
+  width: 664px;
+  height: 210px;
+  position: absolute;
+  left: 59px;
+  top: 166.5px;
+}
+.rectangle-45 {
+  background: #d9d9d9;
+  width: 756px;
+  height: 57px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.group-28 {
+  position: absolute;
+  left: 10px;
+  top: 9.5px;
+  overflow: visible;
+}
+.one-time-gift-amount {
+  color: #000000;
+  text-align: left;
+  font: 600 12px "Inter", sans-serif;
+  position: absolute;
+  left: 92px;
+  top: 203px;
+  width: 136px;
+  height: 25.5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.amount-fill-in {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-432 {
+  background: #d9d9d9;
+  border-radius: 7.5px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.5px;
+  width: 125.91px;
+  height: 24.25px;
+  position: absolute;
+  left: 572.72px;
+  top: 204px;
+}
+.fill-in-amount-in {
+  color: #000000;
+  text-align: center;
+  font: 400 12px "Inter", sans-serif;
+  position: absolute;
+  left: 573.24px;
+  top: 204.52px;
+  width: 125.4px;
+  height: 23.74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donate-monthly {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-48 {
+  background: #a19f95;
+  border-radius: 7.5px;
+  width: 439.5px;
+  height: 47px;
+  position: absolute;
+  left: 165px;
+  top: 271.5px;
+}
+.would-you-like-to-donate-this-amount-monthly {
+  color: #000000;
+  text-align: center;
+  font: 600 12px "Inter", sans-serif;
+  position: absolute;
+  left: 214px;
+  top: 284.5px;
+  width: 326px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.yes-check-box {
+  width: 26.5px;
+  height: 29px;
+  position: static;
+}
+.rectangle-44 {
+  background: #d9d9d9;
+  border-radius: 7.5px;
+  width: 26.5px;
+  height: 29px;
+  position: absolute;
+  left: 177.5px;
+  top: 280.5px;
+}
+._10 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-442 {
+  background: #d9d9d9;
+  border-radius: 7.5px;
+  width: 34.3px;
+  height: 36px;
+  position: absolute;
+  left: 301.95px;
+  top: 198px;
+}
+._102 {
+  color: #000000;
+  text-align: center;
+  font: 600 12px "Inter", sans-serif;
+  position: absolute;
+  left: 300.25px;
+  top: 198px;
+  width: 35.35px;
+  height: 33.23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._100 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-443 {
+  background: #d9d9d9;
+  border-radius: 7.5px;
+  width: 34.41px;
+  height: 36px;
+  position: absolute;
+  left: 455.59px;
+  top: 198px;
+}
+._1002 {
+  color: #000000;
+  text-align: center;
+  font: 600 12px "Inter", sans-serif;
+  position: absolute;
+  left: 456.12px;
+  top: 198px;
+  width: 35.47px;
+  height: 33.23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._50 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-444 {
+  background: #d9d9d9;
+  border-radius: 7.5px;
+  width: 34.41px;
+  height: 36px;
+  position: absolute;
+  left: 403.78px;
+  top: 198px;
+}
+._502 {
+  color: #000000;
+  text-align: center;
+  font: 600 12px "Inter", sans-serif;
+  position: absolute;
+  left: 404.31px;
+  top: 198px;
+  width: 35.47px;
+  height: 33.23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._20 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-445 {
+  background: #d9d9d9;
+  border-radius: 7.5px;
+  width: 34.41px;
+  height: 36px;
+  position: absolute;
+  left: 351.98px;
+  top: 198px;
+}
+._202 {
+  color: #000000;
+  text-align: center;
+  font: 600 12px "Inter", sans-serif;
+  position: absolute;
+  left: 352.51px;
+  top: 198px;
+  width: 35.47px;
+  height: 33.23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rectangle-49 {
+  background: #cdefff;
+  width: 111px;
+  height: 23.5px;
+  position: absolute;
+  left: 167px;
+  top: 143px;
+}
+.one-time-hero {
+  color: #000000;
+  text-align: center;
+  font: 700 12px "Inter", sans-serif;
+  position: absolute;
+  left: 71.5px;
+  top: 147px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rectangle-50 {
+  background: #5ee263;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 213.5px;
+  height: 40px;
+  position: absolute;
+  left: calc(50% - 106.5px);
+  top: 396.5px;
+  box-shadow: inset 0px -2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.pay-now {
+  color: #000000;
+  text-align: center;
+  font: 600 12px "Inter", sans-serif;
+  position: absolute;
+  left: 281px;
+  top: 404px;
+  width: 192px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.monthly-hero {
+  color: #000000;
+  text-align: center;
+  font: 700 12px "Inter", sans-serif;
+  position: absolute;
+  left: 165px;
+  top: 142px;
+  width: 113px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donation-page {
+  background: #fff8f1;
+  width: 1134px;
+  height: 783.75px;
+  position: absolute;
+  left: 153px;
+  top: 24171px;
+  overflow-y: auto;
+}
+.footer {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-47 {
+  background: #112e51;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1.5px 0px 0px 0px;
+  width: 1134px;
+  height: 132.75px;
+  position: absolute;
+  left: 0px;
+  top: 651px;
+}
+.frame-8 {
+  display: flex;
+  flex-direction: row;
+  gap: 26.25px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 31.5px;
+  top: 707.25px;
+}
+.programs-button {
+  background: #112e51;
+  padding: 3.75px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.programs3 {
+  color: #fff8f1;
+  text-align: center;
+  font: 700 12px "Roboto", sans-serif;
+  position: relative;
+}
+.quick-links2 {
+  color: #ffffff;
+  text-align: center;
+  font: 700 18px "Roboto", sans-serif;
+  position: absolute;
+  left: calc(50% - 409.5px);
+  top: 669.75px;
+}
+.contact-info5 {
+  width: 181.5px;
+  height: 96px;
+  position: static;
+}
+.the-inclusion-center {
+  color: #ffffff;
+  text-align: center;
+  font: 400 18px "Inter", sans-serif;
+  position: absolute;
+  left: 834px;
+  top: 669.75px;
+}
+._14-heritage-center-salt-lake-city-ut {
+  color: #ffffff;
+  text-align: right;
+  font: 400 12px "Inter", sans-serif;
+  position: absolute;
+  left: 905.25px;
+  top: 693px;
+}
+._801-742-1785 {
+  color: #ffffff;
+  text-align: right;
+  font: 400 12px "Inter", sans-serif;
+  position: absolute;
+  left: 926.25px;
+  top: 726px;
+}
+.address {
+  color: #ffffff;
+  text-align: left;
+  font: 400 12px "Inter", sans-serif;
+  position: absolute;
+  left: 831.75px;
+  top: 694.5px;
+}
+.phone {
+  color: #ffffff;
+  text-align: left;
+  font: 400 12px "Inter", sans-serif;
+  position: absolute;
+  left: 831.75px;
+  top: 726px;
+}
+.registered-charity-20-3211006 {
+  color: #ffffff;
+  text-align: left;
+  font: 400 12px "Inter", sans-serif;
+  position: absolute;
+  left: 831.75px;
+  top: 750.75px;
+}
+.icon-facebook-v-2 {
+  position: absolute;
+  left: 1062.75px;
+  top: 659.25px;
+  overflow: visible;
+}
+.icon-instagram {
+  position: absolute;
+  left: 1062.75px;
+  top: 732px;
+  overflow: visible;
+}
+.donate-button {
+  background: #88d9ff;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: calc(50% - 90px);
+  top: 699.75px;
+  overflow: hidden;
+}
+.donate2 {
+  color: #112e51;
+  text-align: center;
+  font: 700 18px "Roboto", sans-serif;
+  position: relative;
+}
+.donate-button2 {
+  background: #88d9ff;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: calc(50% - -35.5px);
+  top: 699.75px;
+  overflow: hidden;
+}
+._2023-by-the-inclusion-center-for-community-and-justice-proudly-terms-of-use-privacy-policy {
+  color: #ffffff;
+  text-align: center;
+  font: 400 9px "Roboto", sans-serif;
+  position: absolute;
+  left: calc(50% - 195.75px);
+  top: 768px;
+  width: 392.25px;
+  height: 8.25px;
+}
+._2023-by-the-inclusion-center-for-community-and-justice-proudly-terms-of-use-privacy-policy-span {
+  color: #ffffff;
+  font: 400 9px "Roboto", sans-serif;
+}
+._2023-by-the-inclusion-center-for-community-and-justice-proudly-terms-of-use-privacy-policy-span2 {
+  color: #ffffff;
+  font: 400 9px "Roboto", sans-serif;
+  text-decoration: underline;
+}
+._2023-by-the-inclusion-center-for-community-and-justice-proudly-terms-of-use-privacy-policy-span3 {
+  color: #ffffff;
+  font: 400 9px "Roboto", sans-serif;
+}
+._2023-by-the-inclusion-center-for-community-and-justice-proudly-terms-of-use-privacy-policy-span4 {
+  color: #ffffff;
+  font: 400 9px "Roboto", sans-serif;
+  text-decoration: underline;
+}
+.icon-linkedin {
+  width: 31.57px;
+  height: 31.57px;
+  position: static;
+}
+.vector4 {
+  border-radius: 0px;
+  opacity: 0;
+  position: absolute;
+  left: 1096.57px;
+  top: 728.32px;
+  overflow: visible;
+}
+.group {
+  position: absolute;
+  left: 1068.95px;
+  top: 700.7px;
+  overflow: visible;
+}
+.rectangle-433 {
+  background: #112e51;
+  border-radius: 15px;
+  width: 711px;
+  height: 102.75px;
+  position: absolute;
+  left: 211.5px;
+  top: 131.25px;
+}
+.make-an-impact {
+  color: #ffffff;
+  text-align: center;
+  font: 700 27px "Roboto", sans-serif;
+  position: absolute;
+  left: 472.5px;
+  top: 138px;
+  width: 207.75px;
+  height: 32.25px;
+}
+.donate-today {
+  color: #ffffff;
+  text-align: center;
+  font: 700 27px "Roboto", sans-serif;
+  position: absolute;
+  left: 487.5px;
+  top: 183px;
+  width: 177.75px;
+  height: 32.25px;
+}
+.donation {
+  width: 892.5px;
+  height: 376.5px;
+  position: absolute;
+  left: 114.75px;
+  top: 254.25px;
+}
+.rectangle-412 {
+  background: #112e51;
+  border-radius: 15px;
+  width: 892.5px;
+  height: 376.5px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.group-9 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-423 {
+  background: #fff8f1;
+  border-radius: 7.5px;
+  width: 529.5px;
+  height: 30px;
+  position: absolute;
+  left: 181.5px;
+  top: 209.25px;
+}
+.multiply-your-impact-make-it-monthly {
+  color: #112e51;
+  text-align: center;
+  font: 700 18px "Roboto", sans-serif;
+  position: absolute;
+  left: 290.25px;
+  top: 213.75px;
+  width: 312px;
+  height: 21px;
+}
+.frame-10 {
+  background: #fff8f1;
+  padding: 4.5px 15px 4.5px 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 166.5px;
+  position: absolute;
+  left: 181.5px;
+  top: 78.75px;
+}
+.choose-your-gift {
+  color: #112e51;
+  text-align: center;
+  font: 700 18px "Roboto", sans-serif;
+  position: relative;
+}
+.donate-button3 {
+  background: #a8a8a8;
+  border-radius: 7.5px;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  width: 348px;
+  position: absolute;
+  left: 272.25px;
+  top: 296.25px;
+  overflow: hidden;
+}
+.donatation-amount {
+  display: flex;
+  flex-direction: row;
+  gap: 17.25px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 164.25px;
+  top: 132px;
+}
+.donation-amount {
+  background: #112e51;
+  border-radius: 7.5px;
+  padding: 11.25px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+._1003 {
+  color: #fff8f1;
+  text-align: center;
+  font: 400 27px "Roboto", sans-serif;
+  position: relative;
+}
+.other-input {
+  background: #112e51;
+  border-radius: 7.5px;
+  border-style: solid;
+  border-color: #a0a7b1;
+  border-width: 1.5px;
+  padding: 11.25px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 96.75px;
+  position: relative;
+}
+.other {
+  color: rgba(255, 248, 241, 0.6);
+  text-align: left;
+  font: 400 27px "Roboto", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.component-1 {
+  background: #112e51;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 164.25px;
+  top: 0px;
+}
+.one-time {
+  color: #fff8f1;
+  text-align: center;
+  font: 700 27px "Roboto", sans-serif;
+  position: relative;
+  width: 117.75px;
+  height: 30px;
+}
+.line-3 {
+  border-style: solid;
+  border-color: #fff8f1;
+  border-width: 0.75px 0 0 0;
+  flex-shrink: 0;
+  width: 252px;
+  height: 0px;
+  position: relative;
+}
+.component-12 {
+  background: #112e51;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 421.5px;
+  top: 0px;
+}
+.header {
+  position: sticky;
+  left: 0px;
+  top: 0px;
+}
+.rectangle-12 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.frame-53 {
+  display: flex;
+  flex-direction: row;
+  gap: 25.5px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 527.25px;
+  position: absolute;
+  left: 576.75px;
+  top: 70.5px;
+}
+.programs4 {
+  color: #fff8f1;
+  text-align: center;
+  font: 700 18px "Roboto", sans-serif;
+  position: relative;
+}
+.logo-w-name2 {
+  width: 166.5px;
+  height: 120.75px;
+  position: static;
+}
+.rectangle-132 {
+  background: #112e51;
+  border-style: solid;
+  border-color: #fff8f1;
+  border-width: 1.5px;
+  width: 166.5px;
+  height: 120.75px;
+  position: absolute;
+  left: 30px;
+  top: 17.25px;
+}
+.inclusion-center-for-community-and-justice3 {
+  color: #fff8f1;
+  text-align: center;
+  position: absolute;
+  left: 45px;
+  top: 91.5px;
+  width: 135.75px;
+  height: 36px;
+}
+.inclusion-center-for-community-and-justice-3-span {
+  color: #fff8f1;
+  font: 500 18px "Roboto", sans-serif;
+}
+.inclusion-center-for-community-and-justice-3-span2 {
+  color: #fff8f1;
+  font: 500 21px "Roboto", sans-serif;
+}
+.inclusion-center-for-community-and-justice-3-span3 {
+  color: #fff8f1;
+  font: 500 18px "Roboto", sans-serif;
+}
+.inclusion-center-for-community-and-justice-3-span4 {
+  color: #fff8f1;
+  font: 500 10.5px "Roboto", sans-serif;
+  text-transform: lowercase;
+}
+._7018029-logo-22 {
+  width: 127.5px;
+  height: 66px;
+  position: absolute;
+  left: 47.25px;
+  top: 27px;
+}
+.donate-button4 {
+  background: #88d9ff;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 1028.25px;
+  top: 19.5px;
+  overflow: hidden;
+}
+.button {
+  border-radius: 50px;
+  border-style: solid;
+  border-color: var(--m-3-ref-tertiary-tertiary-95, #ffecf1);
+  border-width: 1px;
+  padding: 12px 20px 12px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 972px;
+  top: 25045px;
+  overflow: hidden;
+}
+.mobile-prototype {
+  color: var(--m-3-ref-tertiary-tertiary-95, #ffecf1);
+  text-align: left;
+  font: 500 16px/24px "DM Sans", sans-serif;
+  position: relative;
+}
+.button2 {
+  border-radius: 50px;
+  border-style: solid;
+  border-color: var(--m-3-ref-primary-primary-99, #fffbfe);
+  border-width: 1px;
+  padding: 12px 20px 12px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 262px;
+  top: 25045px;
+  overflow: hidden;
+}
+
